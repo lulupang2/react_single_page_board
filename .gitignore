@@ -24,3 +24,7 @@ yarn-error.log*
 /firebase.json
 /.firebaserc
 /public/404.html
+/build/
+/.firebase/
+/.github/
+/.idea/
