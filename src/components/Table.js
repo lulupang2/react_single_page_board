@@ -44,7 +44,7 @@ function Table() {
                 </tr>
                 </thead>
                 <tbody>
-                {loading ? `"LOADING..." <img src={logo} className="App-logo" alt="LOADING..."/>`
+                {loading ? <img src={logo} className="App-logo" alt="LOADING..."/>
                     : gogo.data.map((data, index) => <TableBuilder content={data} key={index}/>)}
                 </tbody>
                 <tfoot>
