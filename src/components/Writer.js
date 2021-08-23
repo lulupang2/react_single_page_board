@@ -12,7 +12,7 @@ function Writer() {
         password: '',
     })
 
-    const url = `http://kenken0803.asuscomm.com:3030/insertDB`;
+    const url = `https://kenken0803.asuscomm.com:3030/insertDB`;
     // const url = `http://localhost:3030/insertDB`;
 
     const submitForm = () => {
@@ -84,7 +84,7 @@ function Writer() {
                     }}
                 />
             </div>
-            패스워드<input type="password" onChange={getPassword}/>
+            패스워드<input type="password" onChange={getPassword}/><br/>
             <button onClick={submitForm}>전송</button>
         </div>
     )

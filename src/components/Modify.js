@@ -14,9 +14,9 @@ function Modify(props) {
         id: props.location.state.id
     })
 
-    const url1 = `http://kenken0803.asuscomm.com:3030/deleteDB`;
+    const url1 = `https://kenken0803.asuscomm.com:3030/deleteDB`;
 
-    const url2 = `http://kenken0803.asuscomm.com:3030/updateDB`;
+    const url2 = `https://kenken0803.asuscomm.com:3030/updateDB`;
     // const url2 = `http://localhost:3030/insertDB`;
 
     const deleteDB = () => {
@@ -83,7 +83,7 @@ function Modify(props) {
         <div className="App">
             <div className='form-wrapper'>
                 <input className="title-input" type='text' defaultValue={props.location.state.subject}
-                       onChange={getTitle}/>
+                       onChange={getTitle}/><br/>
                 Email:<input type="text" defaultValue={props.location.state.email} onChange={getEmail}/>
                 작성자:<input type="text" defaultValue={props.location.state.author} onChange={getAuthor}/>
                 <CKEditor
@@ -100,8 +100,8 @@ function Modify(props) {
                     }}
                 />
             </div>
+            패스워드<input type="password" onChange={getPassword}/><br/>
             <button onClick={deleteDB}>삭제하기</button>
-            패스워드<input type="password" onChange={getPassword}/>
             <button onClick={submitForm}>전송하기</button>
         </div>
     )
