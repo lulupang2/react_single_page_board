@@ -2,37 +2,54 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rowrow:hover{
+  background-color: antiquewhite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+  text-align: center;
+  background-color: darkkhaki;
 }
 
-.App-link {
-  color: #61dafb;
+.nav {
+  text-align: center;
+  background-color: cadetblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  text-align: center;
+  background-color: darksalmon;
+}
+
+
+.form-wrapper{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title-input {
+  width: 500px;
+  height: 40px;
+  margin: 10px;
+}
+
+.submit-button {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  background: indianred;
+  border-radius: 5px;
+  margin-top: 40px;
+  vertical-align: middle;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable) {
+  min-height: 500px;
 }

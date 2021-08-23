@@ -34,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^29.1.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
+    "axios": "^0.21.1",
+    "react-router-dom": "^5.2.0"
   }
 }
