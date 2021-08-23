@@ -30,7 +30,7 @@ function Footer() {
 function App() {
   const [page, setPage] = useState(0);
   return (
-      <HashRouter>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Header/>
         <Nav/>
         <Route path="/" exact={true} component={Table}/>
