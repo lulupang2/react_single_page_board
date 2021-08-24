@@ -1,10 +1,11 @@
 import {CKEditor} from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function Modify(props) {
-    console.log(props);
+    const history = useHistory();
     const [Fform, setFform] = useState({
         author: props.location.state.author,
         email: props.location.state.email,
@@ -32,14 +33,14 @@ function Modify(props) {
                 },
                 'id': Fform.id
             }).then(function (res) {
-                // window.location.history.back();
-                alert(`삭제완료 \n ${res}`);
-                console.log(res);
-
+                if (res.data === "success") {
+                    history.push('/');
+                    alert('성공');
+                }
             }).catch(function (err) {
                 alert(err);
             })
-        }else {
+        } else {
             return false;
         }
     }
@@ -57,8 +58,10 @@ function Modify(props) {
             'password': Fform.password,
             'id': Fform.id
         }).then(function (res) {
-            // window.location.history.back();
-            alert(`등록완료 \n ${res}`);
+            if (res.data === "success") {
+                history.push('/');
+                alert('성공');
+            }
         }).catch(function (err) {
             alert(err);
         })

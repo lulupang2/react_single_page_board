@@ -2,8 +2,10 @@ import {CKEditor} from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import Axios from 'axios';
 import {useState} from "react";
+import { useHistory } from "react-router-dom";
 
 function Writer() {
+    const history = useHistory();
     const [Fform, setFform] = useState({
         author: '',
         email: '',
@@ -30,9 +32,10 @@ function Writer() {
             'contents': Fform.contents,
             'password': Fform.password,
         }).then(function (res) {
-            // window.location.history.back();
-            alert(`등록완료 \n ${res}`);
-        }).catch(function (err) {
+            if(res.data==="success"){
+                history.push('/');
+                alert('성공');
+            }        }).catch(function (err) {
             alert(err);
         })
     }
