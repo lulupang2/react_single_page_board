@@ -8,12 +8,12 @@ table {
 }
 
 .rowrow:hover {
-    background-color: antiquewhite;
+    background-color: #EAE9E7;
 }
 
 .header {
     text-align: center;
-    background-color: darkkhaki;
+    background-color: #9BA980;
 }
 
 .nav {
@@ -23,7 +23,7 @@ table {
 
 .footer {
     text-align: center;
-    background-color: darksalmon;
+    background-color: #CDD5D3;
 }
 
 

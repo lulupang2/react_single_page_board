@@ -83,9 +83,9 @@ function Writer() {
     return (
         <div className="App">
             <div className='form-wrapper'>
-                제목<input className="title-input" type='text' onChange={getTitle}/><br/>
-                Email<input type="text" onChange={getEmail}/>
-                작성자<input type="text" onChange={getAuthor}/>
+                <input className="title-input" type='text' placeholder="제목"  onChange={getTitle}/><br/>
+                <input type="text"  placeholder="이메일"  onChange={getEmail}/>&emsp;
+                <input type="text" placeholder="작성자" onChange={getAuthor}/>
                 <CKEditor
                     editor={ClassicEditor}
                     data=""
@@ -100,8 +100,8 @@ function Writer() {
                     }}
                 />
             </div>
-            패스워드<input type="password" onChange={getPassword}/><br/>
-            {loading ? <button onClick={submitForm}>전송</button>
+            <input type="password" placeholder="password" onChange={getPassword}/>&emsp;
+            {loading ? <button onClick={submitForm}>전송!</button>
                 : <img src={logo} className="App-logo" alt="LOADING..."/>}
         </div>
     )

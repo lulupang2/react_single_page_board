@@ -113,8 +113,8 @@ function Modify(props) {
             <div className='form-wrapper'>
                 <input className="title-input" type='text' defaultValue={props.location.state.subject}
                        onChange={getTitle}/><br/>
-                Email:<input type="text" defaultValue={props.location.state.email} onChange={getEmail}/>
-                작성자:<input type="text" defaultValue={props.location.state.author} onChange={getAuthor}/>
+                <input type="text" defaultValue={props.location.state.email} onChange={getEmail}/>&emsp;
+                <input type="text" defaultValue={props.location.state.author} onChange={getAuthor}/>
                 <CKEditor
                     editor={ClassicEditor}
                     data={props.location.state.contents}
@@ -129,9 +129,9 @@ function Modify(props) {
                     }}
                 />
             </div>
-            패스워드<input type="password" onChange={getPassword}/><br/>
+            <input type="password" placeholder="password" onChange={getPassword}/><br/>
             {loading ? <>
-                    <button onClick={deleteDB}>삭제하기</button>
+                    <button onClick={deleteDB}>삭제하기</button>&emsp;
                     <button onClick={submitForm}>전송하기</button>
                 </>
                 : <img src={logo} className="App-logo" alt="LOADING..."/>}
