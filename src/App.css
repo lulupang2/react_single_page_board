@@ -1,75 +1,75 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 table {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.rowrow:hover{
-  background-color: antiquewhite;
+.rowrow:hover {
+    background-color: antiquewhite;
 }
 
 .header {
-  text-align: center;
-  background-color: darkkhaki;
+    text-align: center;
+    background-color: darkkhaki;
 }
 
 .nav {
-  text-align: center;
-  background-color: cadetblue;
+    text-align: center;
+    background-color: cadetblue;
 }
 
 .footer {
-  text-align: center;
-  background-color: darksalmon;
+    text-align: center;
+    background-color: darksalmon;
 }
 
 
-.form-wrapper{
-  width: 60%;
-  margin: 0 auto;
+.form-wrapper {
+    width: 60%;
+    margin: 0 auto;
 }
 
 .title-input {
-  width: 500px;
-  height: 40px;
-  margin: 10px;
+    width: 500px;
+    height: 40px;
+    margin: 10px;
 }
 
 .submit-button {
-  width: 200px;
-  height: 50px;
-  font-size: 20px;
-  padding: 20px;
-  border: none;
-  background: indianred;
-  border-radius: 5px;
-  margin-top: 40px;
-  vertical-align: middle;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    background: indianred;
+    border-radius: 5px;
+    margin-top: 40px;
+    vertical-align: middle;
 }
 
 .ck.ck-editor__editable:not(.ck-editor__nested-editable) {
-  min-height: 500px;
+    min-height: 500px;
 }
 
 .App-logo {
-  height: 5vmin;
-  pointer-events: none;
+    height: 10vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 3s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 1s linear;
+    }
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
