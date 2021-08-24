@@ -32,8 +32,10 @@ function Modify(props) {
                 },
                 'id': Fform.id
             }).then(function (res) {
-                window.location.history.back();
+                // window.location.history.back();
                 alert(`삭제완료 \n ${res}`);
+                console.log(res);
+
             }).catch(function (err) {
                 alert(err);
             })
@@ -55,7 +57,7 @@ function Modify(props) {
             'password': Fform.password,
             'id': Fform.id
         }).then(function (res) {
-            window.location.history.back();
+            // window.location.history.back();
             alert(`등록완료 \n ${res}`);
         }).catch(function (err) {
             alert(err);
