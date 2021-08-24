@@ -28,6 +28,7 @@ function Modify(props) {
 
     const deleteDB = () => {
         if (window.confirm('정말 삭제하시겠습니까?')) {
+            setLoading(false);
             Axios.post(url1, {
                 headers: {
                     "Access-Control-Allow-Origin": "*",
@@ -48,6 +49,7 @@ function Modify(props) {
     }
 
     const submitForm = () => {
+        setLoading(false);
         Axios.post(url2, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
