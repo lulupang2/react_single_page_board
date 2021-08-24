@@ -5,6 +5,7 @@ import Axios from "axios";
 import { useHistory } from "react-router-dom";
 
 function Modify(props) {
+    const [loading, setLoading] = useState(true);
     const history = useHistory();
     const [Fform, setFform] = useState({
         author: props.location.state.author,

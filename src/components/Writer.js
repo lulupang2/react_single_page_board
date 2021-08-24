@@ -3,9 +3,11 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import Axios from 'axios';
 import {useState} from "react";
 import { useHistory } from "react-router-dom";
+import logo from '../logo.svg';
 
 function Writer() {
     const history = useHistory();
+    const [loading, setLoading] = useState(true);
     const [Fform, setFform] = useState({
         author: '',
         email: '',
@@ -21,6 +23,7 @@ function Writer() {
     // const url = `http://localhost:3030/insertDB`;
 
     const submitForm = () => {
+        setLoading(false);
         Axios.post(url, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
@@ -96,7 +99,8 @@ function Writer() {
                 />
             </div>
             패스워드<input type="password" onChange={getPassword}/><br/>
-            <button onClick={submitForm}>전송</button>
+            {loading ? <button onClick={submitForm}>전송</button>
+            : <img src={logo} className="App-logo" alt="LOADING..."/>}
         </div>
     )
 }
