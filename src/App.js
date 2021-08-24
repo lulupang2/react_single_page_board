@@ -15,6 +15,7 @@ function App() {
             <Route path="/" exact={true} component={Table}/>
             <Route path="/writer" component={Writer}/>
             <Route path="/modify" component={Modify}/>
+            <Nav/>
             <Footer/>
         </HashRouter>
     )

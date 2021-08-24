@@ -42,53 +42,54 @@ function Table() {
     }
 
     return (
-        <>
-            <table>
-                <thead>
-                <tr>
-                    <td>작성자</td>
-                    <td>제목</td>
-                    <td>작성일</td>
-                </tr>
-                </thead>
-                <tbody>
-                {loading ? <img src={logo} className="App-logo" alt="LOADING..."/>
-                    : gogo.data.map((data, index) => <TableBuilder content={data} key={index}/>)}
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td>
-                        <button onClick={prev}>이전</button>
-                    </td>
-                    <td>
-                        현재 페이지 : {number}
-                    </td>
-                    <td>
-                        <button onClick={next}>다음</button>
-                    </td>
-                </tr>
-                </tfoot>
-            </table>
-        </>
+        <div className="App">
+            {loading ? <img src={logo} className="App-logo" alt="LOADING..."/>
+                :
+                <table>
+                    <thead>
+                    <tr>
+                        <td className="App">작성자</td>
+                        <td className="App">제목</td>
+                        <td className="App">작성일</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {gogo.data.map((data, index) => <TableBuilder content={data} key={index}/>)}
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td className="App">
+                            <button onClick={prev}>이전</button>
+                        </td>
+                        <td className="App">
+                            현재 페이지 : {number}
+                        </td>
+                        <td className="App">
+                            <button onClick={next}>다음</button>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            }
+        </div>
     );
 }
 
 function TableBuilder({content}) {
-    // const chk = () => {
-    //     console.log(content)
-    // }
+    const chk = () => {
+        console.log(content)
+    }
 
     return (
 
-        <tr className="rowrow">
-            <td>{content.author}</td>
-            <td><Link to={{
+        <tr className="rowrow" onClick={chk}>
+            <td className="App">{content.author}</td>
+            <td className="App"><Link to={{
                 pathname: "/modify",
                 state: content
             }}>{content.subject}</Link></td>
-            <td>{content.created}</td>
+            <td className="App">{content.created}</td>
         </tr>
-
     );
 }
 
