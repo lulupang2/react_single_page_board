@@ -24,17 +24,22 @@ function Modify(props) {
     // const url2 = `http://localhost:3030/insertDB`;
 
     const deleteDB = () => {
-        Axios.post(url1, {
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json;charset=utf-8"
-            },
-            'id': Fform.id
-        }).then(function (res) {
-            alert(`삭제완료 \n ${res}`);
-        }).catch(function (err) {
-            alert(err);
-        })
+        if (window.confirm('정말 삭제하시겠습니까?')) {
+            Axios.post(url1, {
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Content-Type": "application/json;charset=utf-8"
+                },
+                'id': Fform.id
+            }).then(function (res) {
+                window.location.history.back();
+                alert(`삭제완료 \n ${res}`);
+            }).catch(function (err) {
+                alert(err);
+            })
+        }else {
+            return false;
+        }
     }
 
     const submitForm = () => {
@@ -50,6 +55,7 @@ function Modify(props) {
             'password': Fform.password,
             'id': Fform.id
         }).then(function (res) {
+            window.location.history.back();
             alert(`등록완료 \n ${res}`);
         }).catch(function (err) {
             alert(err);

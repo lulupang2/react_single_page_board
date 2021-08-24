@@ -30,6 +30,7 @@ function Writer() {
             'contents': Fform.contents,
             'password': Fform.password,
         }).then(function (res) {
+            window.location.history.back();
             alert(`등록완료 \n ${res}`);
         }).catch(function (err) {
             alert(err);
