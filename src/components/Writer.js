@@ -41,6 +41,7 @@ function Writer() {
             }
         }).catch(function (err) {
             alert(err);
+            setLoading(true);
         })
     }
     const getTitle = e => {

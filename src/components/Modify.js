@@ -42,6 +42,7 @@ function Modify(props) {
                 }
             }).catch(function (err) {
                 alert(err);
+                setLoading(true);
             })
         } else {
             return false;
@@ -68,6 +69,7 @@ function Modify(props) {
             }
         }).catch(function (err) {
             alert(err);
+            setLoading(true);
         })
     }
     const getTitle = e => {
