@@ -30,7 +30,11 @@ function Modify(props) {
                 "Content-Type": "application/json;charset=utf-8"
             },
             'id': Fform.id
-        }).then(alert('삭제함'));
+        }).then(function (res) {
+            alert(`삭제완료 \n ${res}`);
+        }).catch(function (err) {
+            alert(err);
+        })
     }
 
     const submitForm = () => {
@@ -45,7 +49,11 @@ function Modify(props) {
             'contents': Fform.contents,
             'password': Fform.password,
             'id': Fform.id
-        }).then(alert('등록완료'));
+        }).then(function (res) {
+            alert(`등록완료 \n ${res}`);
+        }).catch(function (err) {
+            alert(err);
+        })
     }
     const getTitle = e => {
         const {name, value} = e.target;

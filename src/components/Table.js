@@ -15,9 +15,14 @@ function Table() {
     // const url = `http://localhost:3030/getDB?id=${number}&start=${number}`;
 
     const getDB = async () => {
-        const DBlist = await axios.get(url);
-        setGogo(DBlist);
-        setLoading(false);
+        try {
+            const DBlist = await axios.get(url);
+            setGogo(DBlist);
+            setLoading(false);
+        } catch (err) {
+            alert(err);
+            await getDB();
+        }
     }
 
     useEffect(() => {

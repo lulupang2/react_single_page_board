@@ -29,10 +29,14 @@ function Writer() {
             'subject': Fform.subject,
             'contents': Fform.contents,
             'password': Fform.password,
-        }).then(alert('등록완료'));
+        }).then(function (res) {
+            alert(`등록완료 \n ${res}`);
+        }).catch(function (err) {
+            alert(err);
+        })
     }
     const getTitle = e => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFform({
             ...Fform,
             'subject': value
@@ -41,7 +45,7 @@ function Writer() {
     };
 
     const getEmail = e => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFform({
             ...Fform,
             'email': value
@@ -50,7 +54,7 @@ function Writer() {
     };
 
     const getAuthor = e => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFform({
             ...Fform,
             'author': value
@@ -59,7 +63,7 @@ function Writer() {
     };
 
     const getPassword = e => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFform({
             ...Fform,
             'password': value
@@ -67,8 +71,13 @@ function Writer() {
         console.log(Fform.password);
     };
 
+    const abcd = () =>{
+
+    }
+
     return (
         <div className="App">
+            <button onClick={abcd}>홈</button>
             <div className='form-wrapper'>
                 제목<input className="title-input" type='text' onChange={getTitle}/><br/>
                 Email<input type="text" onChange={getEmail}/>
