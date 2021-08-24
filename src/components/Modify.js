@@ -2,7 +2,8 @@ import {CKEditor} from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import {useState} from "react";
 import Axios from "axios";
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
+import logo from "../logo.svg";
 
 function Modify(props) {
     const [loading, setLoading] = useState(true);
@@ -125,8 +126,11 @@ function Modify(props) {
                 />
             </div>
             패스워드<input type="password" onChange={getPassword}/><br/>
-            <button onClick={deleteDB}>삭제하기</button>
-            <button onClick={submitForm}>전송하기</button>
+            {loading ? <>
+                    <button onClick={deleteDB}>삭제하기</button>
+                    <button onClick={submitForm}>전송하기</button>
+                </>
+                : <img src={logo} className="App-logo" alt="LOADING..."/>}
         </div>
     )
 }

@@ -2,7 +2,7 @@ import {CKEditor} from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import Axios from 'axios';
 import {useState} from "react";
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import logo from '../logo.svg';
 
 function Writer() {
@@ -35,10 +35,11 @@ function Writer() {
             'contents': Fform.contents,
             'password': Fform.password,
         }).then(function (res) {
-            if(res.data==="success"){
+            if (res.data === "success") {
                 history.push('/');
                 alert('성공');
-            }        }).catch(function (err) {
+            }
+        }).catch(function (err) {
             alert(err);
         })
     }
@@ -100,7 +101,7 @@ function Writer() {
             </div>
             패스워드<input type="password" onChange={getPassword}/><br/>
             {loading ? <button onClick={submitForm}>전송</button>
-            : <img src={logo} className="App-logo" alt="LOADING..."/>}
+                : <img src={logo} className="App-logo" alt="LOADING..."/>}
         </div>
     )
 }
