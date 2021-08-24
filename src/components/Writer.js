@@ -75,13 +75,8 @@ function Writer() {
         console.log(Fform.password);
     };
 
-    const abcd = () =>{
-
-    }
-
     return (
         <div className="App">
-            <button onClick={abcd}>홈</button>
             <div className='form-wrapper'>
                 제목<input className="title-input" type='text' onChange={getTitle}/><br/>
                 Email<input type="text" onChange={getEmail}/>
