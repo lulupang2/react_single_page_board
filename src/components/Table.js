@@ -8,7 +8,10 @@ function Table() {
     const [gogo, setGogo] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const url = `https://kenken0803.asuscomm.com:3030/getDB?id=${number - 1}&start=${number}`;
+    const url = `https://kenken0803.herokuapp.com/getDB?id=${number - 1}&start=${number}`;
+
+    // const url = `https://kenken0803.asuscomm.com:3030/getDB?id=${number - 1}&start=${number}`;
+
     // const url = `http://localhost:3030/getDB?id=${number}&start=${number}`;
 
     const getDB = async () => {
