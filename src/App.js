@@ -6,12 +6,16 @@ import Modify from './components/Modify';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import NavBar from "./components/NavBar";
+import Location from "./components/Location";
+
 
 function App() {
     return (
         <HashRouter>
+            <Location/>
             <Header/>
-            <Nav/>
+            <NavBar/>
             <Route path="/" exact={true} component={Table}/>
             <Route path="/writer" component={Writer}/>
             <Route path="/modify" component={Modify}/>
