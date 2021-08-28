@@ -1,8 +1,17 @@
-import {Link} from "react-router-dom";
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import {useState} from "react";
 
 
 function NavBar() {
+    const [hidden, setHidden] = useState(false);
+
+    const toggleHidden = () => {
+        if (hidden === true) {
+            setHidden(false)
+        } else {
+            setHidden(true)
+        }
+    }
     return (
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,6 +32,9 @@ function NavBar() {
                         </li>
                         <li className="nav-item">
                             <Link to="/loc"><a className="nav-link">점심 뭐먹지</a></Link>
+                        </li>
+                        <li className="nav-item">
+                            <button onClick={toggleHidden}>토글토글</button>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -48,9 +60,19 @@ function NavBar() {
                     </form>
                 </div>
             </div>
+            {hidden ? null
+            :<HiddenBox/>}
         </nav>
 
     )
+}
+
+function HiddenBox() {
+    return (
+        <div>
+            까꿍!
+        </div>
+    );
 }
 
 export default NavBar;

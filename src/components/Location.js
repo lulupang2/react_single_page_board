@@ -70,10 +70,9 @@ function ListBuilder({content}) {
             <ul className="list-group">
                 <li className="list-group-item">
                     <a href={`https://www.youtube.com/watch?` + content.id.videoId}>
-                        <h2>{content.snippet.title}</h2><br/>
-                        <img src={content.snippet.thumbnails.high.url}/>
+                        <strong>{content.snippet.title}</strong><br/>
+                        <img className="img-thumbnail img-fluid" src={content.snippet.thumbnails.high.url}/>
                     </a>
-                    <hr/>
                 </li>
             </ul>
         </>
