@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_single_page_board/static/css/main.c9ead8c4.chunk.css",
+    "main.css": "/react_single_page_board/static/css/main.feed6cb4.chunk.css",
     "main.js": "/react_single_page_board/static/js/main.05ca93d9.chunk.js",
     "main.js.map": "/react_single_page_board/static/js/main.05ca93d9.chunk.js.map",
     "runtime-main.js": "/react_single_page_board/static/js/runtime-main.100cea6a.js",
@@ -8,14 +8,14 @@
     "static/js/2.265602ae.chunk.js": "/react_single_page_board/static/js/2.265602ae.chunk.js",
     "static/js/2.265602ae.chunk.js.map": "/react_single_page_board/static/js/2.265602ae.chunk.js.map",
     "index.html": "/react_single_page_board/index.html",
-    "static/css/main.c9ead8c4.chunk.css.map": "/react_single_page_board/static/css/main.c9ead8c4.chunk.css.map",
+    "static/css/main.feed6cb4.chunk.css.map": "/react_single_page_board/static/css/main.feed6cb4.chunk.css.map",
     "static/js/2.265602ae.chunk.js.LICENSE.txt": "/react_single_page_board/static/js/2.265602ae.chunk.js.LICENSE.txt",
     "static/media/logo.42627872.svg": "/react_single_page_board/static/media/logo.42627872.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.100cea6a.js",
     "static/js/2.265602ae.chunk.js",
-    "static/css/main.c9ead8c4.chunk.css",
+    "static/css/main.feed6cb4.chunk.css",
     "static/js/main.05ca93d9.chunk.js"
   ]
 }
