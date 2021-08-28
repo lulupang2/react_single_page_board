@@ -101,7 +101,7 @@ function Writer() {
                 />
             </div>
             <input type="password" placeholder="password" onChange={getPassword}/>&emsp;
-            {loading ? <button onClick={submitForm}>전송!</button>
+            {loading ? <button onClick={submitForm} className="btn btn-primary">전송!</button>
                 : <img src={logo} className="App-logo" alt="LOADING..."/>}
         </div>
     )

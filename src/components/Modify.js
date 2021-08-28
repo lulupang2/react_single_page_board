@@ -131,8 +131,8 @@ function Modify(props) {
             </div>
             <input type="password" placeholder="password" onChange={getPassword}/><br/>
             {loading ? <>
-                    <button onClick={deleteDB}>삭제하기</button>&emsp;
-                    <button onClick={submitForm}>전송하기</button>
+                    <button onClick={deleteDB} className="btn btn-danger">삭제하기</button>&emsp;
+                    <button onClick={submitForm} className="btn btn-primary">전송하기</button>
                 </>
                 : <img src={logo} className="App-logo" alt="LOADING..."/>}
         </div>

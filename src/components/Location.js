@@ -67,15 +67,15 @@ function Location() {
 function ListBuilder({content}) {
     return (
         <>
-            <li>
-                <ul>
+            <ul className="list-group">
+                <li className="list-group-item">
                     <a href={`https://www.youtube.com/watch?` + content.id.videoId}>
                         <h2>{content.snippet.title}</h2><br/>
                         <img src={content.snippet.thumbnails.high.url}/>
                     </a>
                     <hr/>
-                </ul>
-            </li>
+                </li>
+            </ul>
         </>
     );
 }

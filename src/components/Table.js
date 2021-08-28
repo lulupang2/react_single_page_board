@@ -46,8 +46,8 @@ function Table() {
         <div className="App">
             {loading ? <img src={logo} className="App-logo" alt="LOADING..."/>
                 :
-                <table>
-                    <thead>
+                <table className="table">
+                    <thead className="thead-light">
                     <tr>
                         <td className="App">작성자</td>
                         <td className="App">제목</td>
@@ -60,13 +60,13 @@ function Table() {
                     <tfoot>
                     <tr>
                         <td className="App">
-                            <button onClick={prev}>이전</button>
+                            <button onClick={prev} className="btn btn-light">이전</button>
                         </td>
                         <td className="App">
                             현재 페이지 : {number}
                         </td>
                         <td className="App">
-                            <button onClick={next}>다음</button>
+                            <button onClick={next} className="btn btn-light">다음</button>
                         </td>
                     </tr>
                     </tfoot>
