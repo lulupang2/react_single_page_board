@@ -21,6 +21,9 @@ function NavBar() {
                         <li className="nav-item">
                             <Link to="/writer"><a className="nav-link">새 글 쓰기</a></Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/loc"><a className="nav-link">점심 뭐먹지</a></Link>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">

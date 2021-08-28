@@ -4,10 +4,15 @@ import Axios from "axios";
 import {Link} from "react-router-dom";
 
 function Location() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [result, setResult] = useState([]);
+    useEffect(() => {
+            getLoc();
+        }
+        , []);
 
     function getLoc() {
-
+        setLoading(true);
         navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
 
         function onGeoOK(position) {
@@ -24,11 +29,9 @@ function Location() {
     }
 
     function sendLoc(lat, lon) {
-        setLoading(true);
         const url = `https://kenken0803.herokuapp.com/ATY`;
         // const url2 = `http://localhost/ATY`;
         // const url3 = `http://kenken0803.asuscomm.com:3000/ATY`;
-
 
         Axios.post(url, {
             headers: {
@@ -38,27 +41,42 @@ function Location() {
             'lat': lon,
             'lon': lat,
         }).then(function (res) {
-            setLoading(false);
             console.log(res.data.items.length);
-            console.log(res.data.items);
-        }).catch(function (err) {
+            console.log(res.data.items)
+            setResult(res.data.items);
             setLoading(false);
+        }).catch(function (err) {
             alert(err);
+            setLoading(false);
         })
     }
-
 
     return (
         <>
 
-            <div>
+            <div className="App">
                 {loading ? <img src={logo} className="App-logo" alt="LOADING..."/>
                     :
-                    <button onClick={getLoc}>ㄱㄱㄱ</button>
+                    result.map((data, index) => <ListBuilder content={data} key={index}/>)
                 }
             </div>
         </>
     )
+}
+
+function ListBuilder({content}) {
+    return (
+        <>
+            <li>
+                <ul>
+                    <a href={`https://www.youtube.com/watch?` + content.id.videoId}>
+                        <h2>{content.snippet.title}</h2><br/>
+                        <img src={content.snippet.thumbnails.high.url}/>
+                    </a>
+                </ul>
+            </li>
+        </>
+    );
 }
 
 export default Location;

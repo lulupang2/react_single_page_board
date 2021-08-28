@@ -13,12 +13,12 @@ import Location from "./components/Location";
 function App() {
     return (
         <HashRouter>
-            <Location/>
             <Header/>
             <NavBar/>
             <Route path="/" exact={true} component={Table}/>
             <Route path="/writer" component={Writer}/>
             <Route path="/modify" component={Modify}/>
+            <Route path="/loc" component={Location}/>
             <Nav/>
             <Footer/>
         </HashRouter>
