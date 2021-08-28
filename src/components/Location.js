@@ -73,6 +73,7 @@ function ListBuilder({content}) {
                         <h2>{content.snippet.title}</h2><br/>
                         <img src={content.snippet.thumbnails.high.url}/>
                     </a>
+                    <hr/>
                 </ul>
             </li>
         </>
