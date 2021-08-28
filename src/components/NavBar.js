@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {useHistory} from "react-router-dom";
-
+import { Dropdown } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
     return (
@@ -40,6 +41,12 @@ function NavBar() {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+
+                        <li className="nav-item">
+                            <Dropdown>
+
+                            </Dropdown>
                         </li>
                     </ul>
                     <form className="d-flex">
